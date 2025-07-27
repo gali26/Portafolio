@@ -265,6 +265,10 @@ img{
 }
 
 ------
+/*no me funciona como quiero pero anda si no toco esto xD*/
+.separadorLinea{
+    background-color: #f1e6ff;
+}
 
 .timeline {
     font-family: 'Arial', sans-serif;
@@ -308,22 +312,25 @@ img{
     margin-bottom: 20%;
 }
 
-.pagina{
+.pagina {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.carta02{
-    background-color: #f7f7f7;
+.carta02 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     width: 30%;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s;
     align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s;
 }
 
 .carta02:hover {
@@ -332,11 +339,23 @@ img{
 
 .carta02 img {
     width: 100%;
-    height: 450px;
+    height: auto; /* que mantenga proporciones */
+    max-height: 450px;
     border-radius: 100%;
-    margin: 0 auto;
-    object-position: top;
+    object-fit: contain; /* ya no recorta, encaja toda la imagen */
+    object-position: center;
 }
+
+
+
+.carta-contenido02 {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: purple;
+}
+
+
 
 #Contacto {
     display: flex;
@@ -565,4 +584,3 @@ footer{
 
 
 }
-
